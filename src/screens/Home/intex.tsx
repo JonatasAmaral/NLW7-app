@@ -7,7 +7,7 @@ import { styles } from "./styles";
 export function Home() {
 	return (
 		<View style={styles.container}>
-			<Text>Hello React Native</Text>
+			<Text style={styles.text}>Hello React Native</Text>
 		</View>
 	);
 }

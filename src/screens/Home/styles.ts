@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../../theme";
+import { StatusBar } from "react-native";
 
 export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
 		backgroundColor: COLORS.BLACK_SECONDARY,
+		paddingTop: StatusBar.currentHeight,
 	},
 	text: {
 		color: COLORS.WHITE,

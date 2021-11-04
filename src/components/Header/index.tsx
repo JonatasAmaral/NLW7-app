@@ -14,11 +14,12 @@ export function Header() {
 			{/* HACK: render svg from TSX on WEB */}
 			{Platform.OS === "web" ? <LogoSvgx /> : <LogoSvg />}
 
-			<UserPhoto uri="https://github.com/JonatasAmaral.png" />
-
-			<TouchableOpacity>
-				<Text style={styles.logoutText}>Sair</Text>
-			</TouchableOpacity>
+			<View style={styles.logoutButton}>
+				<TouchableOpacity>
+					<Text style={styles.logoutText}>Sair</Text>
+				</TouchableOpacity>
+				<UserPhoto uri="https://github.com/JonatasAmaral.png" />
+			</View>
 		</View>
 	);
 }

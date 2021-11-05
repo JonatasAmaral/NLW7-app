@@ -7,7 +7,6 @@ import { styles } from "./styles";
 
 export function MessageList() {
 	const messagesList = [...Array(3)];
-
 	return (
 		<ScrollView
 			style={styles.container}
@@ -25,7 +24,13 @@ export function MessageList() {
 					},
 				};
 
-				return <Message key={message.id} data={message} />;
+				return (
+					<Message
+						key={message.id}
+						data={message}
+						delay={100 * (messagesList.length - j)}
+					/>
+				);
 			})}
 		</ScrollView>
 	);

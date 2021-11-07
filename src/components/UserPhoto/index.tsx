@@ -39,7 +39,6 @@ export function UserPhoto({ uri, size = "NORMAL" }: Props) {
 					height: containerSize,
 					borderRadius: containerSize / 2,
 				},
-				,
 			]}
 		>
 			<Image

@@ -7,18 +7,22 @@ import { styles } from "./styles";
 import LogoSvg from "../../assets/logo.svg";
 import LogoSvgx from "../../assets/logo";
 import { UserPhoto } from "../UserPhoto";
+import { useAuth } from "../../hooks/auth";
 
 export function Header() {
+	const { user } = useAuth();
 	return (
 		<View style={styles.container}>
 			{/* HACK: render svg from TSX on WEB */}
 			{Platform.OS === "web" ? <LogoSvgx /> : <LogoSvg />}
 
 			<View style={styles.logoutButton}>
-				<TouchableOpacity>
-					<Text style={styles.logoutText}>Sair</Text>
-				</TouchableOpacity>
-				<UserPhoto uri="https://github.com/JonatasAmaral.png" />
+				{user && (
+					<TouchableOpacity>
+						<Text style={styles.logoutText}>Sair</Text>
+					</TouchableOpacity>
+				)}
+				<UserPhoto uri={user?.avatar_url} />
 			</View>
 		</View>
 	);

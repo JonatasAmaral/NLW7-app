@@ -2,6 +2,7 @@
 	"expo": {
 		"name": "nlw7-app",
 		"slug": "nlw7-app",
+		"scheme": "nlw7-app",
 		"version": "1.0.0",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",

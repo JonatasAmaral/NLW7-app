@@ -78,7 +78,9 @@ function AuthProvider({ children }: AuthProviderProps) {
 		}
 	}
 	async function signOut() {
-		// signOut function
+		setUser(null);
+		await AsyncStorage.removeItem(USER_STORAGE);
+		await AsyncStorage.removeItem(TOKEN_STORAGE);
 	}
 
 	useEffect(() => {

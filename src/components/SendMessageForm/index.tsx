@@ -17,14 +17,13 @@ export function SendMessageForm() {
 
 		if (sanitizedMessage.length > 0) {
 			setSendingMessage(true);
-			console.log("passou aqui", sanitizedMessage);
 
 			try {
 				await api.post("/messages", { message: sanitizedMessage });
 
 				setMessage("");
 				Keyboard.dismiss();
-				Alert.alert("Mensagem enviada com sucesso!");
+				// Alert.alert("Mensagem enviada com sucesso!");
 			} catch (error) {
 				console.log(error);
 			}

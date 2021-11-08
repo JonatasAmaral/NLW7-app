@@ -37,7 +37,7 @@ export function MessageList() {
 		}, 2000);
 
 		return () => clearInterval(timer);
-	}, [messagesQueue]);
+	}, []);
 
 	return (
 		<ScrollView
